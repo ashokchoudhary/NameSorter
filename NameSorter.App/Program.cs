@@ -20,6 +20,11 @@ try
 {
     // Get file path
     string absolutePath = Path.GetFullPath(inputFile);
+    if (!File.Exists(absolutePath))
+    {
+        throw new FileNotFoundException("Input file not found.", absolutePath);
+    }
+
     // Read data from file
     var names = reader.ReadNames(inputFile);
     // Sort data
@@ -27,6 +32,10 @@ try
     // Write data to output file
     writer.Write(sorted, outputFile);
     Console.WriteLine($"\nSorted names saved to '{outputFile}'");
+}
+catch (FileNotFoundException ex)
+{
+    Console.WriteLine($"Error occurred: {ex.Message}");
 }
 catch (Exception ex)
 {

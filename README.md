@@ -10,13 +10,13 @@
 # Project Structure
 	/NameSorter
 		/NameSorter.App              // Main console app
-			sorted-names-list.txt        // Generate output file
-			unsorted-names-list.txt      // Input file
+			sorted-names-list.txt    // Generate output file
+			unsorted-names-list.txt  // Input file
 		/NameSorter.Tests            // Unit tests
 		appveyor.yml                 // AppVeyor pipeline yml config
 
 # Flow
 	- Get file path
-    - Read data from file
+    - Read data from file //unsorted-names-list.txt
     - Sort data
-    - Write data to output file
+    - Write data to output file //sorted-names-list.txt
