@@ -1,4 +1,4 @@
-# NameSorter
+﻿# NameSorter
 	
 	The Goal: Name Sorter The Goal: Name Sorter Build a name sorter. Given a set of names, order that set first by last name, then by any given names the person may have. A name must have at least 1 given name and may have up to 3 given names. 
 
@@ -20,3 +20,12 @@
     - Read data from file //unsorted-names-list.txt
     - Sort data
     - Write data to output file //sorted-names-list.txt
+
+## Project Management & DevOps Tools
+
+This project uses the following tools for version control, issue tracking, CI/CD, and communication:
+
+- **[YouTrack (JetBrains)](https://www.jetbrains.com/youtrack/)** – Agile project management and issue tracking (./YouTrack.jpg)
+- **[GitHub](https://github.com/ashokchoudhary/NameSorter/)** – Source code hosting and version control  
+- **[AppVeyor](https://ci.appveyor.com/project/ashokchoudhary/namesorter)** – Continuous Integration and Deployment for .NET  
+- **[Slack]** – Team communication and notifications (./YouTrack.jpg)

@@ -15,10 +15,16 @@ artifacts:
 
 # Email notifications on build failures and recovery
 notifications:
+  - provider: Slack
+    incoming_webhook: https://hooks.slack.com/services/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
+    channel: name-sorter
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
   - provider: Email
     to:
-      - ashok8022@gmail.com
-    on_build_success: false
+    - ashok8022@gmail.com
+    on_build_success: true
     on_build_failure: true
     on_build_status_changed: true
 
