@@ -7,7 +7,7 @@ version: 1.0.{build}
 build_script:
   - dotnet restore
   - dotnet build --configuration Release
-  - dotnet test --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
+  - dotnet test --no-build --configuration Release --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
 
 # Optional artifacts (e.g., store test results if needed)
 artifacts:
