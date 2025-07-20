@@ -25,6 +25,9 @@ namespace NameSorter.App.Models
             // Check name has minimum 2 parts to be considered as valid name.
             if (parts.Length < 2)
                 throw new ArgumentException("Must have at least one given and last name.");
+            if (parts.Length > 4)
+                throw new ArgumentException("Name cannot have more than 3 given names and 1 last name.");
+
 
             LastName = parts.LastOrDefault();
             GivenNames = parts.Take(parts.Length - 1).ToList();

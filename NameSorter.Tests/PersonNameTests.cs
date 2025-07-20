@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using NameSorter.App.Models;
 
 namespace NameSorter.Tests
@@ -26,6 +25,7 @@ namespace NameSorter.Tests
         [InlineData("")]
         [InlineData("  ")]
         [InlineData("Juliet")]
+        [InlineData("A B C D E")]
         public void ThrowsOnInvalidName(string name)
         {
             Assert.Throws<ArgumentException>(() => new PersonName(name));
