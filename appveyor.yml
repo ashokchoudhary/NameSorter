@@ -1,0 +1,26 @@
+# Use Visual Studio 2022 image for .NET Core support
+image: Visual Studio 2022
+# App versioning
+version: 1.0.{build}
+
+# Restore, build, and test steps
+build_script:
+  - dotnet restore
+  - dotnet build --configuration Release
+  - dotnet test --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
+
+# Optional artifacts (e.g., store test results if needed)
+artifacts:
+  - path: '**\*.trx'
+
+# Email notifications on build failures and recovery
+notifications:
+  - provider: Email
+    to:
+      - ashok8022@gmail.com
+    on_build_success: false
+    on_build_failure: true
+    on_build_status_changed: true
+
+# Disable AppVeyor's own test handling
+test: off
